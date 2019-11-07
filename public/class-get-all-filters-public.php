@@ -97,7 +97,7 @@ class Get_All_Filters_Public {
 
 		add_action( 'admin_enqueue_scripts', __CLASS__ . '::enqueue_styles', 20 );
 
-		add_action( 'get_all_filters_render_admin_content', __CLASS__ . '::render_content' );
+		add_action( 'get_all_filters_render_admin_content', __CLASS__ . '::render' );
 
 	}
 
@@ -118,7 +118,7 @@ class Get_All_Filters_Public {
 			'Get All Filters',
 			'manage_options',
 			GET_ALL_FILTERS_SLUG,
-			__CLASS__ . '::render',
+			__CLASS__ . '::render_content',
 			'dashicons-filter',
 			40.7
 		);
@@ -138,7 +138,7 @@ class Get_All_Filters_Public {
 		// Enable header icon filter below.
 		$header_wrapper_class = apply_filters( 'gaf_header_wrapper_class', array( $action ) );
 
-		include_once GET_ALL_FILTERS_DIR . 'public/partials/get-all-filters-public-display.php';
+		include_once GET_ALL_FILTERS_DIR . 'public/partials/includes/get-all-filters.php';
 	}
 
 	/**
@@ -156,7 +156,7 @@ class Get_All_Filters_Public {
 
 		$header_wrapper_class = apply_filters( 'gaf_header_wrapper_class', array( $action ) );
 
-		include_once GET_ALL_FILTERS_DIR . 'public/partials/get-all-filters-public-display.php';
+		include_once GET_ALL_FILTERS_DIR . 'public/partials/get-all-filters-display.php';
 	}
 
 	/**

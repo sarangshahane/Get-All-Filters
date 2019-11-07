@@ -29,6 +29,16 @@
     margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
+    background: #fff;
+    overflow: hidden;
+}
+
+.gaf-row{
+    padding: 0px 15px;
+}
+
+.gaf-col-12{
+    width: 100%;
 }
 
 .gaf-flex {
@@ -61,4 +71,12 @@
     flex: auto;
     text-align: right;
     font-weight: 500;
+}
+
+.gaf-container table{
+    width: 100%;
+}
+.gaf-container table tr td{
+    padding: 8px 0px;
+    border-bottom: 1px #d2d2d2 solid;
 }

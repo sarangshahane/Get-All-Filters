@@ -54,17 +54,17 @@ if ( ! class_exists( 'Get_All_Filters_Update' ) ) :
 
 			// Update auto saved version number.
 			if ( ! $saved_version ) {
-				update_option( 'gaf_version', CARTFLOWS_CA_VER );
+				update_option( 'gaf_version', GET_ALL_FILTERS_VER );
 				return;
 			}
 
 			// If equals then return.
-			if ( version_compare( $saved_version, CARTFLOWS_CA_VER, '=' ) ) {
+			if ( version_compare( $saved_version, GET_ALL_FILTERS_VER, '=' ) ) {
 				return;
 			}
 
 			// Update auto saved version number.
-			update_option( 'gaf_version', CARTFLOWS_CA_VER );
+			update_option( 'gaf_version', GET_ALL_FILTERS_VER );
 
 			do_action( 'get_all_filters_update_after' );
 		}
